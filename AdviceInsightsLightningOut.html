@@ -1,0 +1,23 @@
+<html>
+  <div id="lightningLocator">
+        <h1>
+            Place app here
+        </h1>
+    </div>
+    <script src="https://sandbox-advice-inshights-1.cs78.force.com/lightning/lightning.out.js"></script>
+    <script>
+    $Lightning.use("c:AMP_AdviceInsightsLightningOut",    // name of the Lightning app
+        function() {                  // Callback once framework and app loaded
+            $Lightning.createComponent(
+                "c:amp_TaskWidget", // top-level component of your app
+                {clientId: '0011k00000xOkw2AAC'},                  // attributes to set on the component when created
+                "lightningLocator",   // the DOM location to insert the component
+                function(cmp) {
+                    // callback when component is created and active on the page
+                }
+            );
+        }
+                   , 'https://sandbox-advice-inshights-1.cs78.force.com'  //  endpoint
+    );
+    </script>
+</html>
